@@ -1,0 +1,20 @@
+@media (max-width: 991px) {
+    .navbar-collapse {
+      background-color: white;
+    }
+  
+    .custom-nav-links .nav-link {
+      color: blue !important; 
+      padding: 10px 15px; 
+      border-bottom: 1px solid #ddd; 
+    }
+  
+    .custom-nav-links .nav-link:hover {
+      background-color: lightblue; 
+    }
+  
+    .navbar-toggler {
+      border: none;
+    }
+  }
+  
