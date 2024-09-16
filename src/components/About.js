@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage'; 
 
 const About = () => {
@@ -29,19 +29,23 @@ const About = () => {
   }, [storage]);
 
   return (
-    <Container id="about" fluid className="mt-5" style={{ marginTop: '100px' }}>
+    <Container id="about" fluid className="py-5">
+      <Row className="text-center mb-5">
+        <Col xs={12}>
+          <h1 className="display-3 fw-bold mb-3">About Us</h1>
+        </Col>
+      </Row>
+
       <Row className="align-items-center justify-content-center">
-        <h1 className="text-center" style={{ fontWeight: 'bold', fontSize: '3rem' }}>About Us</h1>
-        <Col xs={12} md={6} lg={5} className="text-center">
+        <Col xs={12} md={6} lg={5} className="mb-4">
           <div
+            className="bg-light rounded-3 shadow-lg overflow-hidden"
             style={{
-              backgroundColor: '#e0e0e0',
               width: '100%',
               maxWidth: '300px', 
-              height: '400px', 
+              height: '400px',
               margin: '0 auto',
-              borderRadius: '20px',
-              overflow: 'hidden', 
+              position: 'relative', 
             }}
           >
             {imageURL1 ? (
@@ -52,44 +56,44 @@ const About = () => {
                   width: '100%',
                   height: '100%', 
                   objectFit: 'cover', 
-                  borderRadius: '20px',
                 }}
               />
             ) : (
-              <p>Loading Image...</p>
+              <div className="d-flex align-items-center justify-content-center h-100">
+                <Spinner animation="border" variant="primary" />
+              </div>
             )}
           </div>
         </Col>
         <Col xs={12} md={6} lg={5} className="mb-4 text-center text-md-start">
-          <h1 style={{ fontWeight: 'bold', fontSize: '3rem' }}>Reego About Journey :</h1>
-          <p style={{ marginTop: '20px', fontSize: '1.2rem' }}>
+          <h2 className="display-4 fw-bold mb-4">Our Journey :</h2>
+          <p className="lead text-muted">
             Reego is a plastic Moulded Furniture Manufacturing unit based at Jalgaon since 2020.
             Reego is having one of the largest product range Offering 3 year guarantee on selected 
-            Products manufactured with imported machines and molds 
-            Brand name of reego is having one of the lowest product range.
+            Products manufactured with imported machines and molds. The brand name of Reego is 
+            known for its extensive product range and affordability.
           </p>
         </Col>
       </Row>
 
       <Row className="align-items-center justify-content-center">
-        <Col xs={12} md={6} lg={5} className="mb-4 text-center text-md-start">
-          <h1 style={{ fontWeight: 'bold', fontSize: '3rem' }}>Reego About Journey :</h1>
-          <p style={{ marginTop: '20px', fontSize: '1.2rem' }}>
+        <Col xs={12} md={6} lg={5} className="mb-4 text-center text-md-end">
+          <h2 className="display-4 fw-bold mb-4">Design Philosophy</h2>
+          <p className="lead text-muted">
             Every Reego unit is a trendsetter of its own right, oozing with style and functionality to
             enhance the personality of the space it is in—living rooms, offices, commercial spaces, and 
             every other space you can think of.
           </p>
         </Col>
-        <Col xs={12} md={6} lg={5} className="mb-5 text-center text-md-start">
+        <Col xs={12} md={6} lg={5} className="mb-4">
           <div
+            className="bg-light rounded-3 shadow-lg overflow-hidden"
             style={{
-              backgroundColor: '#e0e0e0',
               width: '100%',
               maxWidth: '300px', 
-              height: '400px', 
+              height: '400px',
               margin: '0 auto',
-              borderRadius: '20px',
-              overflow: 'hidden', 
+              position: 'relative', 
             }}
           >
             {imageURL2 ? (
@@ -100,11 +104,12 @@ const About = () => {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover', 
-                  borderRadius: '20px',
                 }}
               />
             ) : (
-              <p>Loading Image...</p>
+              <div className="d-flex align-items-center justify-content-center h-100">
+                <Spinner animation="border" variant="primary" />
+              </div>
             )}
           </div>
         </Col>
