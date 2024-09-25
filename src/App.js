@@ -6,36 +6,67 @@ import Product from './components/Product';
 import GetQuote from './components/GetQuote';
 import Contact from './components/Contact';
 import MoreProducts from './components/MoreProducts';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProductDetails from './components/ProductDetails';
+import AdminPanel from './components/AdminPanel';
+import Login from './components/Login';
+import Cart from './components/Cart';
+import Testimonial from './components/Testimonial';
+import PrivateRoute from './components/PrivateRoute';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import { Container } from 'react-bootstrap';
 
 
 function App() {
-
   return (
     <div className="App">
-      <NavbarComponent />
-      <Container fluid className="main-content">
-        <Home />
-        
-        
-        <div style={{ marginBottom: '30px' }}></div> 
-        
-        <About />
+       <Router>
+        <NavbarComponent />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Container fluid className="main-content">
+                <Home />
+                <About />
+                <Product />
+                <Testimonial />
+                <GetQuote />
+                <Contact />
+              </Container>
+            }
+          />
+          
+          <Route
+            path="/reego-final"
+            element={
+              <Container fluid className="main-content">
+                <Home />
+                <About />
+                <Product />
+                <Testimonial />
+                <GetQuote />
+                <Contact />
+              </Container>
+            }
+          />
+          
+          <Route path="/moreproducts" element={<MoreProducts />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} /> 
+          <Route path="/login" element={<Login />} />
 
-        <Router>
-      <Routes>
-        <Route path="/" element={<Product />} />
-        <Route path="/moreproducts" element={<MoreProducts />} />
-      </Routes>
-    </Router>
-        <GetQuote />
-        <Contact />
-        
-      </Container>
+          <Route
+            path="/admin"
+            element={
+              <PrivateRoute>
+                <AdminPanel />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
-

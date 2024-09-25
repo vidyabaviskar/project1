@@ -2,91 +2,95 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaPhoneAlt, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+import './Contact.css'; 
+
+import amex from '../payment/amex.png';
+import mastercard from '../payment/mastercard.png';
+import visa from '../payment/visa.png';
+import rupay from '../payment/rupay.png';
+import netbanking from '../payment/netbanking.png';
+import paytm from '../payment/paytm.png';
+import paypal from '../payment/paypal.png';
 
 const Contact = () => {
-  const buttonStyle = {
-    width: "80px",
-    height: "80px",
-    backgroundColor: "#ffffff", 
-    border: "2px solid #1e90ff", 
-    color: "#1e90ff", 
-    transition: "background-color 0.3s, color 0.3s, transform 0.3s",
-    fontSize: "1.5rem" 
-  };
-
-  const hoverStyle = {
-    backgroundColor: "#1e90ff", 
-    color: "#ffffff", 
-    transform: "scale(1.1)" 
-  };
-
   return (
-    <Container id="contact" className="text-center mt-5" style={{ padding: "2rem 0", borderRadius: "10px", boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)" }}>
-      <h2 className="mb-4" style={{ color: "#333333", fontSize: "2rem", fontWeight: "bold" }}>Contact Us</h2>
-      <div className="d-flex justify-content-center my-4">
-        {/* Facebook */}
-        <a
-          href="https://www.facebook.com/reegochairs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn rounded-circle mx-2 d-flex justify-content-center align-items-center"
-          style={buttonStyle}
-          onMouseOver={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-          onMouseOut={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
-        >
-          <FaFacebookF />
-        </a>
+    <footer id="contact" className="footer glassmorphism-footer">
+      <div className="container py-5">
+        <div className="row">
+          
+          {/* Useful Links Section */}
+          <div className="col-md-3">
+            <h5 className="text-black">USEFUL LINKS</h5>
+            <ul className="list-unstyled">
+              <li><a href="#home" className="text-black">Home</a></li>
+              <li><a href="#about" className="text-black">About</a></li>
+              <li><a href="/moreproducts" className="text-black">Products</a></li>
+            </ul>
+          </div>
 
-        {/* Instagram */}
-        <a
-          href="https://www.instagram.com/reegochairs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn rounded-circle mx-2 d-flex justify-content-center align-items-center"
-          style={buttonStyle}
-          onMouseOver={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-          onMouseOut={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
-        >
-          <FaInstagram />
-        </a>
+          {/* Contact Section */}
+          <div className="col-md-3">
+            <h5 className="text-black">CONTACT</h5>
+            <p className="text-black">
+              Dr Ingles Cancer Laparoscopy Clinic & Surgical Hospital, Jalgaon HO, Jalgaon, Maharashtra, 425001
+            </p>
+            <p className="text-black">+91-9823441662</p>
+          </div>
 
-        {/* Youtube */}
-        <a
-          href="https://www.youtube.com/@reegochairs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn rounded-circle mx-2 d-flex justify-content-center align-items-center"
-          style={buttonStyle}
-          onMouseOver={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-          onMouseOut={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
-        >
-          <FaYoutube />
-        </a>
+          {/* Connect Section */}
+          <div className="col-md-3">
+            <h5 className="text-black">CONNECT</h5>
+            <div className="social-media d-flex flex-column">
+              <div className="d-flex align-items-center my-1">
+                <FaFacebookF className="me-2" />
+                <a href="https://www.facebook.com/reegochairs" target="_blank" rel="noopener noreferrer" className="text-black">
+                  Facebook
+                </a>
+              </div>
+              <div className="d-flex align-items-center my-1">
+                <FaInstagram className="me-2" />
+                <a href="https://www.instagram.com/reegochairs" target="_blank" rel="noopener noreferrer" className="text-black">
+                  Instagram
+                </a>
+              </div>
+              <div className="d-flex align-items-center my-1">
+                <FaYoutube className="me-2" />
+                <a href="https://www.youtube.com/@reegochairs" target="_blank" rel="noopener noreferrer" className="text-black">
+                  YouTube
+                </a>
+              </div>
+              <div className="d-flex align-items-center my-1">
+                <MdEmail className="me-2" />
+                <a href="mailto:sales@reegochairs.com" className="text-black">
+                  Email
+                </a>
+              </div>
+              <div className="d-flex align-items-center my-1">
+                <FaPhoneAlt className="me-2" />
+                <a href="tel:+9730189700" className="text-black">
+                  Phone
+                </a>
+              </div>
+            </div>
+          </div>
 
-        {/* Email */}
-        <a
-          href="mailto:sales@reegochairs.com"
-          className="btn rounded-circle mx-2 d-flex justify-content-center align-items-center"
-          style={buttonStyle}
-          onMouseOver={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-          onMouseOut={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
-        >
-          <MdEmail />
-        </a>
+          {/* Payments Section */}
+          <div className="col-md-3">
+            <h5 className="text-black">PAYMENTS</h5>
+            <div className="payment-icons">
+            <img src={amex} alt="Amex" className="img-fluid" />
+              <img src={mastercard} alt="Mastercard" className="img-fluid" />
+              <img src={visa} alt="Visa" className="img-fluid" />
+              <img src={rupay} alt="RuPay" className="img-fluid" />
+              <img src={netbanking} alt="Net Banking" className="img-fluid" />
+              <img src={paytm} alt="Paytm" className="img-fluid" />
+              <img src={paypal} alt="PayPal" className="img-fluid" />
+            </div>
+          </div>
 
-        {/* Phone */}
-        <a
-          href="tel:+9730189700"
-          className="btn rounded-circle mx-2 d-flex justify-content-center align-items-center"
-          style={buttonStyle}
-          onMouseOver={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-          onMouseOut={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
-        >
-          <FaPhoneAlt />
-        </a>
+        </div>
       </div>
-    </Container>
+    </footer>
   );
 };
 

@@ -1,43 +1,67 @@
-import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import { GrNext, GrPrevious } from "react-icons/gr";
 import { useNavigate } from 'react-router-dom';
-import img1 from '../img1.jpg'; 
-import ReactCardSlider from 'react-card-slider-component';
-import './Product.css'; 
+import Button from 'react-bootstrap/Button';
+import './Product.css';
 
-const sliderClick = (title) => {
-  alert(`Clicked on ${title}`);
-};
+import image1 from '../images/image1.jpg';
+import image2 from '../images/image2.jpg';
+import image3 from '../images/image3.jpg';
+import image4 from '../images/image4.jpg';
+import image5 from '../images/image5.jpg';
+import image6 from '../images/image6.jpg';
 
-const Product = () => {
+export default function Product() {
   const navigate = useNavigate();
 
   const handleViewMoreClick = () => {
     navigate('/moreproducts');
   };
 
-  const slides = [
-    { image: img1, title: "Product 1", description: "This is a description", clickEvent: () => sliderClick("This is a title") },
-    { image: img1, title: "Product 2", description: "This is a second description", clickEvent: () => sliderClick("This is a second title") },
-    { image: img1, title: "Product 3", description: "This is a third description", clickEvent: () => sliderClick("This is a third title") },
-    { image: img1, title: "Product 4", description: "This is a fourth description", clickEvent: () => sliderClick("This is a fourth title") },
-    { image: img1, title: "Product 5", description: "This is a fifth description", clickEvent: () => sliderClick("This is a fifth title") },
-    { image: img1, title: "Product 6", description: "This is a sixth description", clickEvent: () => sliderClick("This is a sixth title") },
-    { image: img1, title: "Product 7", description: "This is a seventh description", clickEvent: () => sliderClick("This is a seventh title") },
+  const images = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6
   ];
 
+  const length = images.length - 1;
+  const [index, setIndex] = useState(0);
+
+  const handlePrev = () => {
+    setIndex(index === 0 ? length : index - 1);
+  };
+
+  const handleNext = () => {
+    setIndex(index === length ? 0 : index + 1);
+  };
+
   return (
-    <Container className="mt-5" id="product" style={{ textAlign: 'center' }}>
-      <h1>Our Products</h1>
-      
-      <ReactCardSlider slides={slides} />
+    <div id="product" className="product-container">
+      <div className="product-image-container">
+        <GrPrevious className="icons" onClick={handlePrev} />
+        <img src={images[index]} alt="product" className="product-img" />
+        <GrNext className="icons" onClick={handleNext} />
+      </div>
 
-      <div style={{ marginBottom: '20px' }}></div> 
-      <Button variant="primary" size="lg" onClick={handleViewMoreClick}>
-        View More
-      </Button>
-    </Container>
+      <div className="bars">
+        {images.map((_, i) => (
+          <div
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`bar ${index === i ? 'barWhite' : ''}`}
+          >
+            _
+          </div>
+        ))}
+      </div>
+      <div className="view-more-button-container">
+        <Button variant="primary" size="lg" onClick={handleViewMoreClick}>
+          View More
+        </Button>
+      </div>
+    </div>
   );
-};
-
-export default Product;
+}

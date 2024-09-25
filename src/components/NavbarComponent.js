@@ -21,6 +21,7 @@ const NavbarComponent = () => {
             <Nav.Link href="#about" onClick={handleNavCollapse}>About</Nav.Link>
             <Nav.Link href="#product" onClick={handleNavCollapse}>Product</Nav.Link>
             <Nav.Link href="#contact" onClick={handleNavCollapse}>Contact</Nav.Link>
+            <Nav.Link href="/login" onClick={handleNavCollapse}>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -8,8 +8,8 @@ const About = () => {
   const storage = getStorage(); 
 
   useEffect(() => {
-    const imageRef1 = ref(storage, 'Reego Chairs/img27.jpg'); 
-    const imageRef2 = ref(storage, 'Reego Chairs/img28.jpg');
+    const imageRef1 = ref(storage, 'Reego Chairs/tablechair5.jpg'); 
+    const imageRef2 = ref(storage, 'Reego Chairs/table7.jpg');
 
     getDownloadURL(imageRef1)
       .then((url) => {
@@ -30,9 +30,9 @@ const About = () => {
 
   return (
     <Container id="about" fluid className="py-5">
-      <Row className="text-center mb-5">
+      <Row className="text-center mb-3"> 
         <Col xs={12}>
-          <h1 className="display-3 fw-bold mb-3">About Us</h1>
+          <h1 className="display-3 fw-bold mb-2">About Us</h1> 
         </Col>
       </Row>
 
@@ -43,7 +43,7 @@ const About = () => {
             style={{
               width: '100%',
               maxWidth: '300px', 
-              height: '400px',
+              height: 'auto', 
               margin: '0 auto',
               position: 'relative', 
             }}
@@ -54,7 +54,8 @@ const About = () => {
                 alt="About Us"
                 style={{
                   width: '100%',
-                  height: '100%', 
+                  height: 'auto', 
+                  maxHeight: '400px', 
                   objectFit: 'cover', 
                 }}
               />
@@ -91,7 +92,7 @@ const About = () => {
             style={{
               width: '100%',
               maxWidth: '300px', 
-              height: '400px',
+              height: 'auto', 
               margin: '0 auto',
               position: 'relative', 
             }}
@@ -102,7 +103,8 @@ const About = () => {
                 alt="Our Journey"
                 style={{
                   width: '100%',
-                  height: '100%',
+                  height: 'auto', 
+                  maxHeight: '400px', 
                   objectFit: 'cover', 
                 }}
               />
