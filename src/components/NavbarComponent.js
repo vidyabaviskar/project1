@@ -24,7 +24,7 @@ const NavbarComponent = () => {
             <Nav.Link href="#about" onClick={handleNavCollapse}>About</Nav.Link>
             <Nav.Link as={Link} to="/gallery" onClick={handleNavCollapse}>Gallery</Nav.Link>
             {/* Products Dropdown */}
-            <NavDropdown title="Product" id="product-dropdown" onClick={handleNavCollapse}>
+            <NavDropdown title="Product" id="basic-nav-dropdown" onClick={handleNavCollapse}>
               <NavDropdown.Item as={Link} to="/category/chair" onClick={handleNavCollapse}>Chair</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/table" onClick={handleNavCollapse}>Table</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/table-chair-set" onClick={handleNavCollapse}>Table and Chair Set</NavDropdown.Item>
@@ -37,7 +37,6 @@ const NavbarComponent = () => {
             <Nav.Link as={Link} to="/cart" onClick={handleNavCollapse} className="cart-icon">
               <FontAwesomeIcon icon={faShoppingCart} />
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/login" onClick={handleNavCollapse}>Login</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -46,3 +45,5 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
+
+
