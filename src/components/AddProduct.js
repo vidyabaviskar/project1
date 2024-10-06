@@ -6,6 +6,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
   const [product, setProduct] = useState({
     name: '',
     description: '',
+    details: '',
     weight: '',
     guarantee: '',
     price: '',
@@ -42,6 +43,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
       await set(newProductRef, {
         name: product.name,
         description: product.description,
+        details: product.details,
         weight: product.weight,
         guarantee: product.guarantee,
         price: product.price,
@@ -53,6 +55,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
       setProduct({
         name: '',
         description: '',
+        details: '',
         weight: '',
         guarantee: '',
         price: '',
@@ -97,8 +100,22 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     value={product.description} 
                     onChange={handleInputChange} 
                     placeholder="Enter description" 
-                    required 
+                     
                   />
+                </div>
+
+                <div className="form-group mb-3">
+                  <label htmlFor="details">Details</label>
+                  <input 
+                    type="text" 
+                    className="form-control" 
+                    id="details"
+                    name="details" 
+                    value={product.details} 
+                    onChange={handleInputChange} 
+                    placeholder="Enter Details" 
+                     
+                  /> 
                 </div>
 
                 <div className="form-group mb-3">
@@ -111,7 +128,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     value={product.weight} 
                     onChange={handleInputChange} 
                     placeholder="Enter weight" 
-                    required 
+                     
                   />
                 </div>
 
@@ -125,7 +142,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     value={product.guarantee} 
                     onChange={handleInputChange} 
                     placeholder="Enter guarantee period" 
-                    required 
+                     
                   />
                 </div>
 
@@ -152,6 +169,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     name="image" 
                     onChange={handleFileChange} 
                     accept="image/png, image/jpeg, image/jpg" 
+                    multiple
                   />
                 </div>
 
@@ -169,6 +187,8 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     <option value="Chair">Chair</option>
                     <option value="Table">Table</option>
                     <option value="Table and Chair Set">Table and Chair Set</option>
+                    <option value="Tepoys">Tepoys</option>
+                    <option value="Stools">Stools</option>
                   </select>
                 </div>
 
@@ -182,7 +202,7 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     value={product.colors} 
                     onChange={handleInputChange} 
                     placeholder="Enter available colors (comma separated)" 
-                    required 
+                     
                   />
                 </div>
                 <div className="d-flex justify-content-center">

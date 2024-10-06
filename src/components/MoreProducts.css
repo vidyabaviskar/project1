@@ -14,6 +14,15 @@
   margin: auto;
 }
 
+.product-heading {
+  background-color: #1e90ff; 
+  color: white; 
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+
 .card-img {
   width: 100%;
   height: auto;

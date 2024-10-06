@@ -9,10 +9,9 @@ const Home = () => {
         <Col xs={12} md={6} lg={5} className="mb-4">
           <h1 className="display-3 fw-bold mb-3">Reego</h1>
           <h2 className="display-4 text-muted mb-4">Design for Everyday Comfort</h2>
-          <p className="lead mb-4">
+          <p className="lead mb-4"><b>
             At Reego, we bring your ideas to life with our furniture. Whether it's modern chairs, stylish tables, or functional storage, we combine smart design with chic style to make your space both stunning and practical.
-          </p>
-          
+          </b></p>
         </Col>
         <Col xs={12} md={6} lg={5} className="text-center text-md-end">
           <img

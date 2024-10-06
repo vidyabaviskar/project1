@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="col-md-3">
             <h5 className="text-black">PAYMENTS</h5>
             <div className="payment-icons">
-            <img src={amex} alt="Amex" className="img-fluid" />
+              <img src={amex} alt="Amex" className="img-fluid" />
               <img src={mastercard} alt="Mastercard" className="img-fluid" />
               <img src={visa} alt="Visa" className="img-fluid" />
               <img src={rupay} alt="RuPay" className="img-fluid" />

@@ -68,23 +68,23 @@ const About = () => {
         </Col>
         <Col xs={12} md={6} lg={5} className="mb-4 text-center text-md-start">
           <h2 className="display-4 fw-bold mb-4">Our Journey :</h2>
-          <p className="lead text-muted">
+          <p className="lead text-muted"><b>
             Reego is a plastic Moulded Furniture Manufacturing unit based at Jalgaon since 2020.
             Reego is having one of the largest product range Offering 3 year guarantee on selected 
             Products manufactured with imported machines and molds. The brand name of Reego is 
             known for its extensive product range and affordability.
-          </p>
+            </b></p>
         </Col>
       </Row>
 
       <Row className="align-items-center justify-content-center">
         <Col xs={12} md={6} lg={5} className="mb-4 text-center text-md-end">
           <h2 className="display-4 fw-bold mb-4">Design Philosophy</h2>
-          <p className="lead text-muted">
+          <p className="lead text-muted"><b>
             Every Reego unit is a trendsetter of its own right, oozing with style and functionality to
             enhance the personality of the space it is in—living rooms, offices, commercial spaces, and 
             every other space you can think of.
-          </p>
+            </b></p>
         </Col>
         <Col xs={12} md={6} lg={5} className="mb-4">
           <div

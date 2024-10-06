@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { ref, onValue } from 'firebase/database';
 import { getDatabase } from 'firebase/database';  
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';  // Import FontAwesome icon
+
 import './MoreProducts.css';
 
 const MoreProducts = () => {
@@ -48,10 +47,6 @@ const MoreProducts = () => {
     navigate(`/product/${productId}`); 
   };
 
-  const handleCartClick = () => {
-    navigate('/cart'); 
-  };
-
   if (loading) return <p>Loading products...</p>;
   if (error) return <p>Error loading products: {error}</p>;
 
@@ -62,45 +57,43 @@ const MoreProducts = () => {
   }, {});
 
   return (
-    <Container className="mt-4" id="moreproducts">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h1>Our Products</h1>
-        <Button variant="primary" onClick={handleCartClick}>  
-          <FontAwesomeIcon icon={faShoppingCart} /> Cart 
-        </Button>
-      </div>
-      {categories.map((category) => (
-        <div key={category} className="mb-5">
-          <h2>{category}</h2>
-          <Row>
-            {groupedProducts[category].length > 0 ? (
-              groupedProducts[category].map((product) => (
-                <Col lg={3} md={4} sm={6} key={product.id} className="mb-4">
-                  <Card className="product-card h-100" onClick={() => handleCardClick(product.id)}>
-                    <Card.Img
-                      variant="top"
-                      src={product.imageURL} 
-                      alt={product.name}
-                      className="card-img"
-                    />
-                    <Card.Body className="text-center">
-                      <Card.Title className="card-title">{product.name}</Card.Title>
-                      <Card.Text className="card-text"><strong> ₹ {product.price}</strong></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))
-            ) : (
-              <Col>
-                <p>No products available in this category.</p>
-              </Col>
-            )}
-          </Row>
+    <div className='page-container'>
+      <Container className="mt-4" id="moreproducts">
+        <div className="text-center w-30 mb-6" style={{width: '50% '}}>
+          <h1 className="product-heading">Our Products</h1>
         </div>
-      ))}
-    </Container>
+        {categories.map((category) => (
+          <div key={category} className="mb-5">
+            <h2>{category}</h2>
+            <Row>
+              {groupedProducts[category].length > 0 ? (
+                groupedProducts[category].map((product) => (
+                  <Col lg={3} md={4} sm={6} key={product.id} className="mb-4">
+                    <Card className="product-card h-100" onClick={() => handleCardClick(product.id)}>
+                      <Card.Img
+                        variant="top"
+                        src={product.imageURL} 
+                        alt={product.name}
+                        className="card-img"
+                      />
+                      <Card.Body className="text-center">
+                        <Card.Title className="card-title">{product.name}</Card.Title>
+                        <Card.Text className="card-text"><strong> ₹ {product.price}</strong></Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))
+              ) : (
+                <Col>
+                  <p>No products available in this category.</p>
+                </Col>
+              )}
+            </Row>
+          </div>
+        ))}
+      </Container>
+    </div>
   );
 };
 
 export default MoreProducts;
-

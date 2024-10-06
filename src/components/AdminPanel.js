@@ -67,6 +67,16 @@ const AdminPanel = () => {
           <FontAwesomeIcon icon={faUser} className="me-2" />
           User Data
         </button>
+        
+        {/* gallery */}
+
+        {/* <button
+          onClick={() => handleViewChange('gallery')}
+          className="btn btn-primary"
+        >
+          <FontAwesomeIcon icon={faGallery} className="me-2" />
+          Update Gallery
+        </button> */}
       </div>
 
       <div className="content-section flex-grow-1 p-4">
