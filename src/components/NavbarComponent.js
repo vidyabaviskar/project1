@@ -21,10 +21,10 @@ const NavbarComponent = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto custom-nav-links">
             <Nav.Link as={Link} to="/" onClick={handleNavCollapse}>Home</Nav.Link>
-            <Nav.Link href="#about" onClick={handleNavCollapse}>About</Nav.Link>
+            <Nav.Link href="/aboutpage" onClick={handleNavCollapse}>About</Nav.Link>
             <Nav.Link as={Link} to="/gallery" onClick={handleNavCollapse}>Gallery</Nav.Link>
             {/* Products Dropdown */}
-            <NavDropdown title="Product" id="basic-nav-dropdown" onClick={handleNavCollapse}>
+            <NavDropdown title="Product" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/category/chair" onClick={handleNavCollapse}>Chair</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/table" onClick={handleNavCollapse}>Table</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/table-chair-set" onClick={handleNavCollapse}>Table and Chair Set</NavDropdown.Item>

@@ -3,7 +3,7 @@ import NavbarComponent from './components/NavbarComponent';
 import Home from './components/Home';
 import About from './components/About';
 import Product from './components/Product';
-import GetQuote from './components/GetQuote';
+// import GetQuote from './components/GetQuote';
 import Contact from './components/Contact';
 import MoreProducts from './components/MoreProducts';
 import ProductDetails from './components/ProductDetails';
@@ -20,6 +20,7 @@ import TepoysPage from './pages/TepoysPage';
 import StoolsPage from './pages/StoolsPage'; 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import { Container } from 'react-bootstrap';
+import AboutPage from './components/AboutPage';
 
 function App() {
   return (
@@ -34,32 +35,16 @@ function App() {
                 
                 <Home />
                 <About />
-                <Gallery />
                 <Product />
                 <Testimonial />
-                <GetQuote />
-                <Contact />
-              </Container>
-            }
-          />
-          
-          <Route
-            path="/reego-final"
-            element={
-              <Container fluid className="main-content">
-                
-                <Home />
-                <About />
-                <Product />
-                <Testimonial />
-                <GetQuote />
+                {/* <GetQuote /> */}
                 <Contact />
               </Container>
             }
           />
           
           <Route path="/gallery" element={<Gallery />} />
-
+          <Route path="/aboutpage" element={<AboutPage />} />
           {/* MoreProducts Route */}
           <Route path="/moreproducts" element={<MoreProducts />} />
           

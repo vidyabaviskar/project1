@@ -1,0 +1,37 @@
+.about-page {
+    background-color: #f0f9ff;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.profile-pic-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styling for the new boxes */
+.box {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: left;
+    background-color: aqua;
+}
+
+.box h3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 14px;
+    line-height: 1.5;
+}

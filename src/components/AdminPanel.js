@@ -45,7 +45,7 @@ const AdminPanel = () => {
   return (
     <div className="admin-panel d-flex">
       <div className="sidebar d-flex flex-column p-3" style={{ width: '200px', borderRight: '1px solid #ccc' }}>
-        <h4 className="text-center mb-4">Admin Options</h4>
+        <h4 className="text-center mb-4">Admin Dashboard</h4>
         <button
           onClick={() => handleViewChange('add')}
           className="btn btn-primary mb-3"

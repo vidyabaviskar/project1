@@ -41,7 +41,7 @@ const Testimonials = () => {
                 src={testimonial.image}
                 alt={testimonial.author}
               />
-              <p className="lead testimonial-text">{testimonial.text}</p>
+              <p className="lead testimonial-text"><strong>{testimonial.text}</strong></p>
               <h5 className="mt-3">{testimonial.author}</h5>
               <small>{testimonial.position}</small>
             </div>
