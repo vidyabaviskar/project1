@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import AddProduct from './AddProduct';
 import EditProduct from './EditProduct';
+import UploadPhotos from './UploadPhotos';
 import './AdminPanel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faEdit, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faEdit, faUser, faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const AdminPanel = () => {
   const [products, setProducts] = useState([]);
@@ -13,6 +14,7 @@ const AdminPanel = () => {
   const [view, setView] = useState(''); 
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
 
   useEffect(() => {
     const db = getDatabase();
@@ -60,6 +62,15 @@ const AdminPanel = () => {
           <FontAwesomeIcon icon={faEdit} className="me-2" />
           Edit Product
         </button>
+
+        <button
+          onClick={() => handleViewChange('upload')}
+          className="btn btn-primary"
+        >
+          <FontAwesomeIcon icon={faUpload} className="me-2" />
+          Upload Photos
+        </button>
+
         <button
           onClick={() => handleViewChange('quote')}
           className="btn btn-primary"
@@ -67,16 +78,6 @@ const AdminPanel = () => {
           <FontAwesomeIcon icon={faUser} className="me-2" />
           User Data
         </button>
-        
-        {/* gallery */}
-
-        {/* <button
-          onClick={() => handleViewChange('gallery')}
-          className="btn btn-primary"
-        >
-          <FontAwesomeIcon icon={faGallery} className="me-2" />
-          Update Gallery
-        </button> */}
       </div>
 
       <div className="content-section flex-grow-1 p-4">
@@ -105,6 +106,12 @@ const AdminPanel = () => {
               setSuccessMessage={setSuccessMessage}
               setErrorMessage={setErrorMessage}
             />
+          </div>
+        )}
+
+        {view === 'upload' && (
+          <div className="upload-photos-section">
+            <UploadPhotos />
           </div>
         )}
 
@@ -149,3 +156,4 @@ const AdminPanel = () => {
 };
 
 export default AdminPanel;
+

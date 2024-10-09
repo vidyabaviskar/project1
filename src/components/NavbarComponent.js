@@ -32,7 +32,7 @@ const NavbarComponent = () => {
               <NavDropdown.Item as={Link} to="/category/stools" onClick={handleNavCollapse}>Stools</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#contact" onClick={handleNavCollapse}>Contact</Nav.Link>
+            <Nav.Link href="/contact-us" onClick={handleNavCollapse}>Contact</Nav.Link>
             {/* Cart Icon */}
             <Nav.Link as={Link} to="/cart" onClick={handleNavCollapse} className="cart-icon">
               <FontAwesomeIcon icon={faShoppingCart} />

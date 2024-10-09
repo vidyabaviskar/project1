@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import logo from '../logo.png';
+import './Home.css';
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
           <img
             src={logo}
             alt="Reego"
-            className="img-fluid rounded-3 shadow-lg"
+            className="home-img-fluid rounded-3 shadow-lg"
             style={{ maxHeight: '600px', objectFit: 'cover', width: '100%' }}
           />
         </Col>

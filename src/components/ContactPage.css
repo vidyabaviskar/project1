@@ -1,0 +1,67 @@
+.contact-page {
+  background-color: #ffffff; /* Light background for the contact page */
+  padding: 20px; /* Padding for the overall page */
+  border-radius: 10px; /* Rounded corners */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+/* Header styles */
+.contact-page h1 {
+  color: #0b3d91; /* Dark blue for the header */
+}
+
+.contact-page h4 {
+  color: #333; /* Darker text for subheaders */
+}
+
+/* Contact Section with Gradient Background */
+.contact-section {
+  background: linear-gradient(to right, #e0f7fa, #b3e5fc); /* Light blue gradient */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-bottom: 20px;
+  color: #333; /* Dark text for contrast */
+}
+
+.text-primary {
+  color: #0b3d91 !important; /* Dark blue for primary text */
+}
+
+.text-secondary {
+  color: #6c757d; /* Muted text for secondary headers */
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between icons */
+  margin-top: 20px; 
+}
+
+.social-link {
+  color: #002966; /* Dark blue for social links */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  color: #ff4d4d; /* Hover color for social links */
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Map Integration */
+iframe {
+  border: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for iframe */
+  border-radius: 8px; /* Rounded corners for iframe */
+}
+
+/* Footer */
+.footer-text {
+  color: #6c757d; /* Muted text for footer */
+  margin: 20px 0; /* Margin for footer text */
+}

@@ -4,12 +4,12 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-    margin-bottom: 40px;
+    gap: 10px; 
+    margin-bottom: 20px;
 }
 
 .form-control {
-    border-radius: 0.5rem; 
+    border-radius: 0.2rem; 
 }
 
 textarea {

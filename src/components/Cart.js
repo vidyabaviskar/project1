@@ -44,15 +44,15 @@ const Cart = () => {
   };
 
   return (
-    <div className="container mt-5 cart-page">
-      <h2 className="text-center mb-4">Your Cart</h2>
+    <div className="cart-page">
+      <h2 className="cart-header">Your Cart</h2>
       {cartItems.length > 0 ? (
         <div className="row">
           {cartItems.map((item, index) => (
             <div key={index} className="col-md-6 col-lg-4 mb-4">
               <div className="card h-100 shadow-sm">
                 <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
+                  <h5 className="card-title"><strong>{item.name}</strong></h5>
                   <h6 className="card-subtitle mb-2 text-muted">₹{item.price}</h6>
                   <p className="card-text">{item.description}</p>
                 </div>

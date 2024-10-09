@@ -1,6 +1,6 @@
 .login-container {
   max-width: 400px;
-  background-color: #fff;
+  background-color: #f8f9fa; /* Light background */
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -14,16 +14,17 @@
 
 .login-title {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #003366; /* Dark blue for titles */
 }
 
 .login-error {
   font-size: 0.875rem;
   margin-bottom: 1rem;
+  color: #dc3545; /* Bootstrap danger color */
 }
 
 .input-group-text {
-  background-color: #007bff;
+  background-color: #003366; /* Dark blue for input icons */
   color: white;
 }
 
@@ -35,20 +36,21 @@
 }
 
 .form-control:focus {
-  border-color: #007bff;
+  border-color: #003366; /* Dark blue for focus state */
   box-shadow: none;
 }
 
 .login-button {
-  background-color: #007bff;
+  background-color: #003366; /* Dark blue for button */
   border: none;
   padding: 0.75rem;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  color: white; /* White text for the button */
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Lighter shade of blue on hover */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 

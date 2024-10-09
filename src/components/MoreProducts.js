@@ -59,7 +59,7 @@ const MoreProducts = () => {
   return (
     <div className='page-container'>
       <Container className="mt-4" id="moreproducts">
-        <div className="text-center w-30 mb-6" style={{width: '50% '}}>
+        <div className="text-center w-30 mb-6 align-items-center" style={{width: '50% '}}>
           <h1 className="product-heading">Our Products</h1>
         </div>
         {categories.map((category) => (
@@ -69,7 +69,7 @@ const MoreProducts = () => {
               {groupedProducts[category].length > 0 ? (
                 groupedProducts[category].map((product) => (
                   <Col lg={3} md={4} sm={6} key={product.id} className="mb-4">
-                    <Card className="product-card h-100" onClick={() => handleCardClick(product.id)}>
+                    <Card className="more-product-card h-100" onClick={() => handleCardClick(product.id)}>
                       <Card.Img
                         variant="top"
                         src={product.imageURL} 

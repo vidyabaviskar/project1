@@ -1,45 +1,79 @@
 .glassmorphism-footer {
-    background: rgba(0, 123, 255, 0.2); 
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    border-radius: 10px;
+  background: linear-gradient(to right, #f0f9ff, #e0f7fa); /* Light gradient background */
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif; /* Use the same font as admin panel */
+}
+
+.footer {
+  padding: 5px 10px; /* Increased padding for a more spacious look */
+}
+
+.footer .text-black {
+  color: #0b3d91; /* Dark blue for header */
+}
+
+.footer .list-unstyled {
+  padding-left: 0; /* Remove padding */
+}
+
+.footer .list-unstyled a {
+  color: #0b3d91; /* Dark blue for links */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer .list-unstyled a:hover {
+  color: #063073; /* Darker shade on hover */
+}
+
+.footer .payment-icons {
+  display: flex;
+  flex-wrap: wrap; /* Wrap payment icons if needed */
+}
+
+.footer .payment-icons img {
+  width: 50px; /* Adjust size */
+  margin: 10px; /* Uniform margin for spacing */
+}
+
+.social-media .d-flex {
+  display: flex;
+  align-items: center;
+  margin: 10px 0; /* Spacing between social media links */
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #0b3d91; /* Dark blue for social media links */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.social-media a:hover {
+  color: #063073; /* Darker shade on hover */
+}
+
+.social-media i {
+  margin-right: 10px; /* Consistent spacing */
+}
+
+.me-2 {
+  margin-right: 10px; /* Maintain spacing for icon */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px; /* Adjust padding for smaller screens */
   }
-  
-  .footer .text-black {
-    color: #000000;
+
+  .footer h5 {
+    font-size: 1.25rem; /* Slightly smaller heading */
   }
-  
-  .footer .list-unstyled a {
-    color: #ffffff;
-    text-decoration: none;
+
+  .payment-icons img {
+    width: 40px; /* Smaller icon size on mobile */
   }
-  
-  .footer .payment-icons img {
-    width: 50px;
-    margin: 0 10px;
-  }
-  
-  .social-media .d-flex {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .social-media a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .social-media a:hover {
-    color: #007bff;
-  }
-  
-  .social-media i {
-    margin-right: 10px;
-  }
-  
-  .me-2 {
-    margin-right: 10px;
-  }
-  
+}

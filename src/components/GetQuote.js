@@ -51,7 +51,7 @@ const GetQuote = () => {
                 <h2 className="text-center text-primary mb-4">Get a Quote</h2>
                 <form method="POST" onSubmit={getData} className="row">
                     <div className="col-md-6">
-                        <div className="form-group mb-3">
+                        <div className="form-group mb-1">
                             <input
                                 type="text"
                                 name="Name"
@@ -63,7 +63,7 @@ const GetQuote = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group mb-3">
+                        <div className="form-group mb-1">
                             <input
                                 type="email"
                                 name="Email"
@@ -75,7 +75,7 @@ const GetQuote = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group mb-3">
+                        <div className="form-group mb-1">
                             <input
                                 type="text"
                                 name="Contact"
@@ -87,7 +87,7 @@ const GetQuote = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group mb-3">
+                        <div className="form-group mb-1">
                             <input
                                 type="text"
                                 name="Product"
@@ -101,7 +101,7 @@ const GetQuote = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="form-group mb-3">
+                        <div className="form-group mb-1">
                             <textarea
                                 name="Message"
                                 value={user.Message}

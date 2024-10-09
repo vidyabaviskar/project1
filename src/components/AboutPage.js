@@ -5,7 +5,7 @@ import image1 from '../images/image1.jpg';
 const AboutPage = () => {
     return (
         <div className="container about-page my-5" id="aboutpage">
-            {/* About Section */}
+
             <div className="row align-items-center mb-5">
                 <div className="col-md-6 text-center">
                     <div className="profile-pic-container">
@@ -27,10 +27,9 @@ const AboutPage = () => {
                 </div>
             </div>
 
-            {/* New Section: 3 Columns */}
             <div className="row">
                 <div className="col-md-4">
-                    <div className="box p-4 text-light bg-dark">
+                    <div className="box p-4 text-dark bg-light">
                         <h3>Design for Everyday Comfort</h3>
                         <p>
                         At Reego, we transform your vision into reality with our innovative furniture. 
@@ -42,7 +41,7 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="box p-4 text-light bg-dark">
+                    <div className="box p-4 text-dark bg-light">
                         <h3>Our Journey</h3>
                         <p>
                         Established in 2020, Reego is a leading plastic-molded furniture manufacturing unit based in Jalgaon. 
@@ -54,7 +53,7 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="box p-4 text-light bg-dark">
+                    <div className="box p-4 text-dark bg-light">
                         <h3>Design Philosophy</h3>
                         <p>
                         At Reego, every piece of furniture is designed with the aim of elevating the personality of the space it occupies. 

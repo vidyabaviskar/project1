@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="action">
           <div className="price">
-            <span>₹{product.price}</span> 
+            <span>₹{product.price}</span>
           </div>
           <button className="cart-button">
             <svg
@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
                 strokeLinecap="round"
               />
             </svg>
-            <span>Add to cart</span>
+            <span>Buy</span>
           </button>
         </div>
       </div>
@@ -43,22 +43,20 @@ const ProductCard = ({ product }) => {
 
 const StyledWrapper = styled.div`
   .card {
-    --bg-card: #27272a;
-    --primary: #6d28d9;
-    --primary-800: #4c1d95;
-    --primary-shadow: #2e1065;
-    --light: #d9d9d9;
-    --zinc-800: #18181b;
-    --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-
+    --bg-card: #f0f4f8; /* Light background color */
+    --primary: #0b3d91; /* Dark blue for primary */
+    --primary-light: #063073; /* Darker shade for hover */
+    --light: #d9d9d9; /* Light grey for borders or shadows */
+    --dark: #343a40; /* Dark grey for text color */
+    
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     padding: 1rem;
     width: 100%;
-    height: 400px;
-    background-color: white;
+    height: 400px; /* Fixed height for uniformity */
+    background-color: var(--bg-card); /* Background color for card */
     border-radius: 1rem;
   }
 
@@ -81,13 +79,13 @@ const StyledWrapper = styled.div`
   .title {
     font-size: 1rem;
     font-weight: 600;
-    color: black;
+    color: var(--dark); /* Dark text color for title */
     text-transform: capitalize;
   }
 
   .description {
     font-size: 0.875rem;
-    color: black;
+    color: var(--dark); /* Dark text color for description */
   }
 
   .action {
@@ -99,7 +97,7 @@ const StyledWrapper = styled.div`
   .price {
     font-size: 1.5rem;
     font-weight: 700;
-    color: black;
+    color: var(--dark); /* Dark text color for price */
   }
 
   .cart-button {
@@ -107,20 +105,18 @@ const StyledWrapper = styled.div`
     align-items: center;
     gap: 0.25rem;
     padding: 0.5rem;
-    background-image: grey;
+    background-color: var(--primary); /* Use primary color for button */
     font-size: 0.75rem;
     font-weight: 500;
-    color: black;
-    border: 2px solid hsla(262, 83%, 58%, 0.5);
+    color: white; /* White text for button */
     border-radius: 0.5rem;
-    box-shadow: inset 0 0 0.25rem 1px var(--light);
+    box-shadow: inset 0 0 0.25rem 1px var(--light); /* Light shadow effect */
   }
 
   .cart-button .cart-icon {
-    width: 1rem;
+    width: 1rem; /* Size of the icon */
   }
 
-  
   .card-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -134,11 +130,10 @@ const StyledWrapper = styled.div`
     }
 
     .card {
-      width: calc(50% - 1rem);
+      width: calc(50% - 1rem); /* Responsive width */
     }
   }
 
-  
   @media (max-width: 576px) {
     .card {
       width: calc(50% - 1rem);
@@ -146,7 +141,5 @@ const StyledWrapper = styled.div`
     }
   }
 `;
-
-
 
 export default ProductCard;

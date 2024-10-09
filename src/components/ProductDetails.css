@@ -1,8 +1,32 @@
-#product-image {
+.product-image {
   border: 1px solid #000000; 
   border-radius: 0.5rem; 
   max-height: 600px; 
   transition: transform 0.3s ease;
+}
+
+.thumbnail-image {
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.feedback-form .form-label {
+  font-weight: bold;
+}
+
+.feedback-card-custom {
+  border: 1px solid #eaeaea; 
+  border-radius: 0.5rem; 
+  background-color: #f9f9f9; 
+  transition: background-color 0.3s ease;
+}
+
+.feedback-card-custom:hover {
+  background-color: #eaeaea;
 }
 
 .feedbacks-section {

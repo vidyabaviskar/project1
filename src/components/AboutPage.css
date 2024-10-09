@@ -1,7 +1,8 @@
 .about-page {
-    background-color: #f0f9ff;
+    background: linear-gradient(to right, #f0f9ff, #e0f7fa); 
     padding: 50px;
     border-radius: 10px;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .profile-pic-container {
@@ -10,28 +11,65 @@
 }
 
 h2 {
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0b3d91; 
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #0b3d91; 
 }
 
-/* Styling for the new boxes */
 .box {
     margin-bottom: 20px;
     border-radius: 8px;
     text-align: left;
-    background-color: aqua;
+    background-color: #e0f4fc; 
+    border: 1px solid #0b3d91; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .box h3 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0b3d91; 
+    margin-bottom: 15px;
 }
 
 .box p {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; 
+}
+
+.btn-primary {
+    background-color: #0b3d91; 
+    border-color: #0b3d91;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #063073;
+}
+
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .box h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 }
