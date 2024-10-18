@@ -18,7 +18,6 @@ const Contact = () => {
       <div className="container py-5">
         <div className="row">
           
-          {/* Useful Links Section */}
           <div className="col-md-3">
             <h5 className="text-black">USEFUL LINKS</h5>
             <ul className="list-unstyled">
@@ -28,7 +27,6 @@ const Contact = () => {
             </ul>
           </div>
 
-          {/* Contact Section */}
           <div className="col-md-3">
             <h5>CONTACT</h5>
             <p>
@@ -37,7 +35,6 @@ const Contact = () => {
             <p>+91-9823441662</p>
           </div>
 
-          {/* Connect Section */}
           <div className="col-md-3">
             <h5 className="text-black">CONNECT</h5>
             <div className="social-media d-flex flex-column">
@@ -74,7 +71,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Payments Section */}
           <div className="col-md-3">
             <h5>PAYMENTS</h5>
             <div className="payment-icons">

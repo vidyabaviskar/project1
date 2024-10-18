@@ -187,7 +187,6 @@ const AddProduct = ({ setSuccessMessage, setErrorMessage }) => {
                     <option value="Chair">Chair</option>
                     <option value="Table">Table</option>
                     <option value="Table and Chair Set">Table and Chair Set</option>
-                    <option value="Tepoys">Tepoys</option>
                     <option value="Stools">Stools</option>
                   </select>
                 </div>

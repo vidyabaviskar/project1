@@ -58,6 +58,6 @@ button[type="submit"]:hover {
     }
 
     button[type="submit"] {
-        width: 100%; /* Full width for mobile */
+        width: 100%; 
     }
 }

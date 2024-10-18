@@ -28,7 +28,7 @@ const NavbarComponent = () => {
               <NavDropdown.Item as={Link} to="/category/chair" onClick={handleNavCollapse}>Chair</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/table" onClick={handleNavCollapse}>Table</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/table-chair-set" onClick={handleNavCollapse}>Table and Chair Set</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/tepoys" onClick={handleNavCollapse}>Tepoys</NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="/category/tepoys" onClick={handleNavCollapse}>Tepoys</NavDropdown.Item> */}
               <NavDropdown.Item as={Link} to="/category/stools" onClick={handleNavCollapse}>Stools</NavDropdown.Item>
             </NavDropdown>
 

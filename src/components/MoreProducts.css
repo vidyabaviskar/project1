@@ -12,13 +12,13 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   margin: auto;
+
 }
 
 
 .product-heading {
   background-color: #9ac6f2; 
   color: white; 
-  /* padding: 10px; */
   border-radius: 5px;
   margin: 0;
   align-items: center;
@@ -37,7 +37,6 @@
   font-weight: bold;
   text-align: center;
   color: #0058af; 
-  /* padding: 0.5rem 0;  */
 }
 
 @media (max-width: 576px) {
@@ -54,7 +53,7 @@
 
 @media (min-width: 768px) {
   .more-product-card {
-    width: 14rem; 
+    width: 14rem;
   }
 }
 

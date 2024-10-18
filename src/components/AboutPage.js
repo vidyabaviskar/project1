@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutPage.css'; 
-import image1 from '../images/image1.jpg';
+import image9 from '../images/image9.jpg';
 
 const AboutPage = () => {
     return (
@@ -10,17 +10,18 @@ const AboutPage = () => {
                 <div className="col-md-6 text-center">
                     <div className="profile-pic-container">
                         <img 
-                            src={image1}
+                            src={image9}
                             alt="About"
-                            className="rounded-circle img-fluid" 
+                            className="img-fluid" 
+                            height="50%"
+                            width="50%"
                         />
                     </div>
                 </div>
                 <div className="col-md-6">
                     <h2>About Reego Chairs</h2>
                     <p>
-                        Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. 
-                        Lobortis elementum nibh tellus molestie nunc non. Aliquet bibendum.
+                        Design For Everyday Comfort.
                     </p>
                     <a href="/moreproducts" className="btn btn-primary">Our Products</a>
                     
@@ -28,19 +29,8 @@ const AboutPage = () => {
             </div>
 
             <div className="row">
-                <div className="col-md-4">
-                    <div className="box p-4 text-dark bg-light">
-                        <h3>Design for Everyday Comfort</h3>
-                        <p>
-                        At Reego, we transform your vision into reality with our innovative furniture. 
-                        Whether it's modern chairs, sleek tables, or functional storage solutions, 
-                        our products blend smart design with chic style, making your space both beautiful and practical. 
-                        We strive to provide comfort and elegance in every piece, ensuring that your home or 
-                        office is not only stylish but also highly functional.
-                        </p>
-                    </div>
-                </div>
-                <div className="col-md-4">
+                
+            <div className="col-md-4">
                     <div className="box p-4 text-dark bg-light">
                         <h3>Our Journey</h3>
                         <p>
@@ -63,7 +53,21 @@ const AboutPage = () => {
                         </p>
                     </div>
                 </div>
+                <div className="col-md-4">
+                    <div className="box p-4 text-dark bg-light">
+                        <h3>Our Goals</h3>
+                        <p>Our goal is to deliver high-quality, ergonomically designed chairs that combine style, durability, and comfort.</p>
+                    </div>
+                </div>
+                
             </div>
+            <div className="md-4">
+                    <div className="goal-box p-4 text-dark bg-light">
+                        <h3>Owner</h3>
+                        <p>Nishikant Madhwani</p><p>Resham Madhwani</p>
+                        
+                    </div>
+                </div>
         </div>
     );
 }

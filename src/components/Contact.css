@@ -1,79 +1,78 @@
 .glassmorphism-footer {
-  background: linear-gradient(to right, #f0f9ff, #e0f7fa); /* Light gradient background */
+  background: linear-gradient(to right, #f0f9ff, #e0f7fa); 
   backdrop-filter: blur(10px); 
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
   border-radius: 10px;
-  font-family: 'Poppins', sans-serif; /* Use the same font as admin panel */
+  font-family: 'Poppins', sans-serif; 
 }
 
 .footer {
-  padding: 5px 10px; /* Increased padding for a more spacious look */
+  padding: 5px 10px; 
 }
 
 .footer .text-black {
-  color: #0b3d91; /* Dark blue for header */
+  color: #0b3d91; 
 }
 
 .footer .list-unstyled {
-  padding-left: 0; /* Remove padding */
+  padding-left: 0;
 }
 
 .footer .list-unstyled a {
-  color: #0b3d91; /* Dark blue for links */
+  color: #0b3d91; 
   text-decoration: none;
-  transition: color 0.3s; /* Smooth transition for hover */
+  transition: color 0.3s; 
 }
 
 .footer .list-unstyled a:hover {
-  color: #063073; /* Darker shade on hover */
+  color: #063073;
 }
 
 .footer .payment-icons {
   display: flex;
-  flex-wrap: wrap; /* Wrap payment icons if needed */
+  flex-wrap: wrap; 
 }
 
 .footer .payment-icons img {
-  width: 50px; /* Adjust size */
-  margin: 10px; /* Uniform margin for spacing */
+  width: 50px;
+  margin: 10px; 
 }
 
 .social-media .d-flex {
   display: flex;
   align-items: center;
-  margin: 10px 0; /* Spacing between social media links */
+  margin: 10px 0; 
 }
 
 .social-media a {
   text-decoration: none;
-  color: #0b3d91; /* Dark blue for social media links */
-  transition: color 0.3s; /* Smooth transition for hover */
+  color: #0b3d91; 
+  transition: color 0.3s; 
 }
 
 .social-media a:hover {
-  color: #063073; /* Darker shade on hover */
+  color: #063073;
 }
 
 .social-media i {
-  margin-right: 10px; /* Consistent spacing */
+  margin-right: 10px; 
 }
 
 .me-2 {
-  margin-right: 10px; /* Maintain spacing for icon */
+  margin-right: 10px;
 }
 
-/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .footer {
-    padding: 30px 15px; /* Adjust padding for smaller screens */
+    padding: 30px 15px;
   }
 
   .footer h5 {
-    font-size: 1.25rem; /* Slightly smaller heading */
+    font-size: 1.25rem; 
   }
 
   .payment-icons img {
-    width: 40px; /* Smaller icon size on mobile */
+    width: 40px; 
   }
 }

@@ -1,10 +1,98 @@
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+body {
+  background: linear-gradient(135deg, #f0faff, #d3e8f5, #b0dae6);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh; 
+  margin: 0;
+  padding: 0;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -1; 
+  animation: float 6s ease-in-out infinite; 
+}
+
+body::before {
+  width: 500px;
+  height: 500px;
+  top: 20%;
+  left: -150px;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  bottom: 15%;
+  right: -150px;
+  animation-delay: 3s; 
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 
-#about {
-  margin-top: 150px; 
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(30px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+
+button,
+a,
+img {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a:hover,
+img:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  body::before,
+  body::after {
+    display: none; 
+  }
+
+ 
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

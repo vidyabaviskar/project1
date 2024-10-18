@@ -38,4 +38,3 @@ const ChairPage = () => {
 };
 
 export default ChairPage;
-

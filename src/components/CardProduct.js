@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProductCard = ({ product }) => {
+const CardProduct = ({ product }) => {
   return (
     <StyledWrapper>
       <div className="card">
@@ -43,11 +43,11 @@ const ProductCard = ({ product }) => {
 
 const StyledWrapper = styled.div`
   .card {
-    --bg-card: #f0f4f8; /* Light background color */
-    --primary: #0b3d91; /* Dark blue for primary */
-    --primary-light: #063073; /* Darker shade for hover */
-    --light: #d9d9d9; /* Light grey for borders or shadows */
-    --dark: #343a40; /* Dark grey for text color */
+    --bg-card: #e6f2ff; /* Lighter blue shade */
+    --primary: #0b3d91; 
+    --primary-light: #063073; 
+    --light: #d9d9d9;
+    --dark: #343a40; 
     
     position: relative;
     display: flex;
@@ -55,9 +55,10 @@ const StyledWrapper = styled.div`
     gap: 0.75rem;
     padding: 1rem;
     width: 100%;
-    height: 400px; /* Fixed height for uniformity */
-    background-color: var(--bg-card); /* Background color for card */
+    height: 400px; 
+    background-color: var(--bg-card); 
     border-radius: 1rem;
+    transition: transform 0.2s;
   }
 
   .image_container {
@@ -79,13 +80,13 @@ const StyledWrapper = styled.div`
   .title {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--dark); /* Dark text color for title */
+    color: var(--dark);
     text-transform: capitalize;
   }
 
   .description {
     font-size: 0.875rem;
-    color: var(--dark); /* Dark text color for description */
+    color: var(--dark); 
   }
 
   .action {
@@ -97,7 +98,7 @@ const StyledWrapper = styled.div`
   .price {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--dark); /* Dark text color for price */
+    color: var(--dark); 
   }
 
   .cart-button {
@@ -105,41 +106,31 @@ const StyledWrapper = styled.div`
     align-items: center;
     gap: 0.25rem;
     padding: 0.5rem;
-    background-color: var(--primary); /* Use primary color for button */
+    background-color: var(--primary); 
     font-size: 0.75rem;
     font-weight: 500;
-    color: white; /* White text for button */
+    color: white; 
     border-radius: 0.5rem;
-    box-shadow: inset 0 0 0.25rem 1px var(--light); /* Light shadow effect */
+    box-shadow: inset 0 0 0.25rem 1px var(--light); 
   }
 
   .cart-button .cart-icon {
-    width: 1rem; /* Size of the icon */
-  }
-
-  .card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
+    width: 1rem; 
   }
 
   @media (max-width: 768px) {
-    .card-wrapper {
-      justify-content: space-evenly;
-    }
-
     .card {
-      width: calc(50% - 1rem); /* Responsive width */
+      height: auto;
+      padding: 0.75rem;
     }
   }
 
   @media (max-width: 576px) {
     .card {
-      width: calc(50% - 1rem);
-      justify-content: space-evenly; 
+      height: auto;
+      padding: 0.5rem;
     }
   }
 `;
 
-export default ProductCard;
+export default CardProduct;

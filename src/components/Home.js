@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import logo from '../logo.png';
+import logo1 from '../logo1.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
         </Col>
         <Col xs={12} md={6} lg={5} className="text-center text-md-end">
           <img
-            src={logo}
+            src={logo1}
             alt="Reego"
             className="home-img-fluid rounded-3 shadow-lg"
             style={{ maxHeight: '600px', objectFit: 'cover', width: '100%' }}
@@ -28,3 +28,4 @@ const Home = () => {
 };
 
 export default Home;
+
